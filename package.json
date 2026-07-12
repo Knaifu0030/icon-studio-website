@@ -4,7 +4,7 @@
   "private": true,
   "description": "A ICON Dance Academy — dance & fitness classes in Hejjala Gate, Bengaluru",
   "scripts": {
-    "dev": "node --require ./scripts/fix-exfat-readlink.cjs node_modules/next/dist/bin/next dev",
+    "dev": "node --require ./scripts/fix-exfat-readlink.cjs ./scripts/dev.cjs",
     "build": "node --require ./scripts/fix-exfat-readlink.cjs node_modules/next/dist/bin/next build",
     "start": "node --require ./scripts/fix-exfat-readlink.cjs node_modules/next/dist/bin/next start"
   },

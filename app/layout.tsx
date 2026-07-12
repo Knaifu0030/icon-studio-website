@@ -18,10 +18,10 @@ const manrope = Manrope({
 
 // Set NEXT_PUBLIC_SITE_URL (e.g. https://aicondanceacademy.in) once the
 // academy's domain is live so canonical/OG URLs resolve to it.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
-  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+  metadataBase: new URL(siteUrl),
   title: "A ICON Dance Academy | Dance & Fitness Classes in Hejjala Gate, Bengaluru",
   description:
     "Join Bollywood, Hip Hop, Contemporary, Freestyle, Filmy Folk, Salsa, Zumba, Aerobics and Yoga classes at A ICON Dance Academy near Ganesha Temple, Hejjala Gate, Bengaluru. Dance classes for all ages — enrol now.",
