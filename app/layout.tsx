@@ -104,8 +104,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${bodoni.variable} ${manrope.variable}`}>
-      <body>
+    <html
+      lang="en-IN"
+      className={`${bodoni.variable} ${manrope.variable}`}
+      suppressHydrationWarning
+    >
+      <body suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
